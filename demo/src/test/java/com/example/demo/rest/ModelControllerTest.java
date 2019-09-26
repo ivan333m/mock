@@ -17,6 +17,7 @@ import javax.inject.Inject;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -42,7 +43,8 @@ public class ModelControllerTest {
 //        when(responseBuilder.findAll(any())).thenReturn(null);
         mockMvc
         .perform(get("/models"))
-            .andExpect(status().is4xxClientError());
+            .andExpect(status().is4xxClientError())
+            .andExpect(content().string("{\"error\":\"not found\"}"));
     }
 
 }
