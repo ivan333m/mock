@@ -1,12 +1,3 @@
-// ============================================================================
-// File          : ModelController
-// Created       : 9/26/19
-// Description   :
-// Modifications :
-//
-// ============================================================================
-// Copyright(c) 2019 Zoral, Ukraine
-// ============================================================================
 package com.example.demo.rest;
 
 import org.springframework.http.HttpStatus;
